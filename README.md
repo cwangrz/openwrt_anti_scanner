@@ -7,7 +7,7 @@ Instruction
 --- 
 1. make sure python3 is installed on your openwrt firmware
 2. upload script to /root
-3. create cron job 
+3. create cron job (for example on every 30th minute）
 ```
 */30 * * * * python3 /root/anti_scanner.py
 ```
