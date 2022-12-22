@@ -5,13 +5,13 @@ import re
 import time
 from datetime import datetime
 
-THRESH_HOLD = 1
-CHAIN_NAME = 'ABUSERS'
-LOG_FILE = 'abusers.log'
-BAN_LIST = 'banlist.txt'
-LOG_START = '..START..'
-LOG_END = '..END..'
-FILTER_TOKENS = ['Exit before auth','Bad password attempt']
+THRESH_HOLD = 1 #The number of bad attempts allowed
+CHAIN_NAME = 'ABUSERS' #Custom iptable chain name
+LOG_FILE = 'abusers.log' #Custom log file name
+BAN_LIST = 'banlist.txt' #Custom file name of banned ips
+LOG_START = '..START..' #Custom log command
+LOG_END = '..END..' #Custom log command
+FILTER_TOKENS = ['Exit before auth','Bad password attempt'] #Custom list of keywords to filter out bad attempts
 
 logger = open(LOG_FILE,'a')
 ipPattern = re.compile(r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})')
